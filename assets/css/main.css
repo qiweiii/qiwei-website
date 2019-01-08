@@ -1763,6 +1763,7 @@ input, select, textarea {
 		#nav a {
 			position: relative;
 			display: inline-block;
+			float: left;
 			color: #ffffff;
 			width: 1em;
 			height: 1em;
@@ -2132,6 +2133,7 @@ input, select, textarea {
 		text-align: center;
 		padding: 2em 0 0 0;
 		font-size: 0.75em;
+		opacity: 0.2;
 	}
 
 		#footer a {
