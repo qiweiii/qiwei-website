@@ -27,27 +27,12 @@ var h1 = document.querySelector("h1");
 var reset = document.querySelector("#reset");
 var mode = document.querySelectorAll(".mode");
 
-
-
-
-
-
-
-
-
-
 // Main
 // in this function, we initialise everything
 init();
 
 // add a listener to New Game button
 reset.addEventListener("click",resetFunc);
-
-
-
-
-
-
 
 
 
@@ -123,7 +108,7 @@ function resetFunc() {
 	// make the text on the button new Game
 	this.textContent = "New Game";
 	// make the h1 background original
-	h1.style.background = "steelblue";
+	// h1.style.background = "#000000";
 }
 
 function setUpModeBtn() {
@@ -161,7 +146,7 @@ function setUpSquares() {
 				// also change the color of the h1 background
 				h1.style.background = clickedColor;
 			} else {
-				this.style.background = "#232323";
+				this.style.background = "#4d4d4d";
 				messageDisplay.textContent = "Try Again!!";
 			}
 		});

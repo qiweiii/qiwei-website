@@ -1,6 +1,7 @@
 body {
-	background-color: #232323;
-	margin: 0;
+	background-color: #a6a6a6;
+	max-width: 700px;
+	margin: auto;
 	font-family: "Montserrat","Avenir";
 }
 
@@ -29,7 +30,7 @@ h1 {
 	color: white;
 	text-align: center;
 	line-height: 1.1;
-	background-color: steelblue;
+	background-color: #4d4d4d;
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
