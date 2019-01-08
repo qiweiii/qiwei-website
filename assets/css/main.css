@@ -1313,6 +1313,7 @@ input, select, textarea {
 		background-position: center;
 		background-attachment: fixed;
 		overflow-y: scroll;
+		min-width: 410px;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1763,7 +1764,6 @@ input, select, textarea {
 		#nav a {
 			position: relative;
 			display: inline-block;
-			float: left;
 			color: #ffffff;
 			width: 1em;
 			height: 1em;
