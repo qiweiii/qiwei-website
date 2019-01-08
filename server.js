@@ -16,8 +16,8 @@ app.get('/', function (req, res) {
 });
 
 // add other routes below
-// app.get('/about', function (req, res) {
-//   res.sendFile(path.join(__dirname + 'views/about.html'));
-// });
+app.get('/colorgame', function (req, res) {
+  res.sendFile(path.join(__dirname + '/colorGame.html'));
+});
 
 app.listen(process.env.PORT || 8080);

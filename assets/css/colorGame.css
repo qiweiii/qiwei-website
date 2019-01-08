@@ -1,0 +1,84 @@
+body {
+	background-color: #232323;
+	margin: 0;
+	font-family: "Montserrat","Avenir";
+}
+
+.square {
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left; 
+	/*rmb what you did to image gallery, make them float*/
+	margin: 1.66%;
+	border-radius: 12%;
+	transition: background, 0.5s;
+	/*to make it work on all browsers*/
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+}
+
+#container {
+	max-width: 600px;
+	margin: 20px auto;
+	/*rmb how to set margin of top left bottom right, this one 
+	means that top-bottom margin of container is 20 and other sides auto*/
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	line-height: 1.1;
+	background-color: steelblue;
+	margin: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 20px 0;
+	/*this means top and bottom 20, left right 0*/
+}
+
+
+
+#stripe {
+	background: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+#message {
+	display: inline-block;
+	width: 20%;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700px;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	/*when any property changes it takes 0.3s*/
+	transition: all, 0.3s;
+	/*to make it work on all browsers*/
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
