@@ -25,8 +25,9 @@ app.get('/colorgame', function (req, res) {
 });
 
 app.get('/.well-known/acme-challenge/:content', function(req, res) {
-  res.send('http://www.qiweiyang.me/.well-known/acme-challenge/b9D4srFVCgiyhpVah4jLV39syBxhSksW_nwo_2sd6Dg')
-})
+  res.send('w4JwsF3zbUaabgu0RgehwsH3tFI4aj5P7BqrFh-IyBg')
+});
+
 //send email
 app.post('/contact', function (req, res) {
   let mailOpts, smtpTrans; //The route contains my SMTP configuration details, a set of email formatting options I define
