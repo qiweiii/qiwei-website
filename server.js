@@ -46,10 +46,10 @@ app.post('/contact', function (req, res) {
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
       console.log(error);
-      res.sendFile(path.join(__dirname + 'index.html'));
+      res.sendFile(path.join(__dirname + '/index.html'));
     } else {
       console.log("Message sent: " + response.message);
-      res.sendFile(path.join(__dirname + 'index.html'));
+      res.sendFile(path.join(__dirname + '/index.html'));
     }
   });
 });
