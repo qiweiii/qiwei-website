@@ -50,11 +50,11 @@ app.post('/contact', function (req, res) {
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
-      res.render('contact-failure');
+      return console.log(error);
     }
-    else {
-      res.render('contact-success');
-    }
+    console.log('Message sent: %s', info.messageId);
+    // Preview only available when sending through an Ethereal account
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
   });
 });
 // app.post('/contact', function (req, res) {
