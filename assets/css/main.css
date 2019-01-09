@@ -1313,7 +1313,7 @@ input, select, textarea {
 		background-position: center;
 		background-attachment: fixed;
 		overflow-y: scroll;
-		min-width: 472px;
+		min-width: 410px;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
