@@ -46,34 +46,13 @@ app.post('/contact', function (req, res) {
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
       console.log(error);
-      res.end("error");
+      res.sendFile(path.join(__dirname + 'index.html'));
     } else {
       console.log("Message sent: " + response.message);
-      res.end("sent")
+      res.sendFile(path.join(__dirname + 'index.html'));
     }
   });
 });
-// app.post('/contact', function (req, res) {
-// 	var transporter = nodemailer.createTransport({
-// 	 service: 'gmail',
-// 	 auth: {
-// 	        user: GMAIL_USER,
-// 	        pass: GMAIL_PASS
-// 	    }
-// 	});
-// 	const mailOptions = {
-// 	  from: 'chiwaydyang@gmail.com', // sender address
-// 	  to: 'yangqiwei97@gmail.com', // list of receivers
-// 	  subject: 'Subject of your email', // Subject line
-// 	  html: '<p>Your html here</p>'// plain text body
-// 	};
-// 		transporter.sendMail(mailOptions, function (err, info) {
-// 	   if(err)
-// 	     console.log(err)
-// 	   else
-// 	     console.log(info);
-// 	});
-// });
 
 
 
