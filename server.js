@@ -24,55 +24,55 @@ app.get('/colorgame', function (req, res) {
   res.sendFile(path.join(__dirname + '/colorGame.html'));
 });
 
-// send email
-// app.post('/contact', function (req, res) {
-//   let mailOpts, smtpTrans; //The route contains my SMTP configuration details, a set of email formatting options I define
-//   smtpTrans = nodemailer.createTransport({
-//     host: 'smtp.gmail.com',
-//     port: 465,
-//     secure: true,
-//     auth: {
-//       user: GMAIL_USER,
-//       pass: GMAIL_PASS
-//     }
-//   });
-//   mailOpts = {
-//     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-//     to: 'qw@qiweiyang.me',
-//     subject: 'New message from contact form at qiweiyang.me',
-//     text: ''
-//     //text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
-//   };
-//   smtpTrans.sendMail(mailOpts, function (error, response) {
-//     if (error) {
-//       res.render('contact-failure');
-//     }
-//     else {
-//       res.render('contact-success');
-//     }
-//   });
-// });
+//send email
 app.post('/contact', function (req, res) {
-	var transporter = nodemailer.createTransport({
-	 service: 'gmail',
-	 auth: {
-	        user: 'chiwaydyang@gmail.com',
-	        pass: 'chiwaydyang'
-	    }
-	});
-	const mailOptions = {
-	  from: 'chiwaydyang@gmail.com', // sender address
-	  to: 'yangqiwei97@gmail.com', // list of receivers
-	  subject: 'Subject of your email', // Subject line
-	  html: '<p>Your html here</p>'// plain text body
-	};
-		transporter.sendMail(mailOptions, function (err, info) {
-	   if(err)
-	     console.log(err)
-	   else
-	     console.log(info);
-	});
+  let mailOpts, smtpTrans; //The route contains my SMTP configuration details, a set of email formatting options I define
+  smtpTrans = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: GMAIL_USER,
+      pass: GMAIL_PASS
+    }
+  });
+  mailOpts = {
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    to: 'qw@qiweiyang.me',
+    subject: 'New message from contact form at qiweiyang.me',
+    text: ''
+    //text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    if (error) {
+      res.render('contact-failure');
+    }
+    else {
+      res.render('contact-success');
+    }
+  });
 });
+// app.post('/contact', function (req, res) {
+// 	var transporter = nodemailer.createTransport({
+// 	 service: 'gmail',
+// 	 auth: {
+// 	        user: GMAIL_USER,
+// 	        pass: GMAIL_PASS
+// 	    }
+// 	});
+// 	const mailOptions = {
+// 	  from: 'chiwaydyang@gmail.com', // sender address
+// 	  to: 'yangqiwei97@gmail.com', // list of receivers
+// 	  subject: 'Subject of your email', // Subject line
+// 	  html: '<p>Your html here</p>'// plain text body
+// 	};
+// 		transporter.sendMail(mailOptions, function (err, info) {
+// 	   if(err)
+// 	     console.log(err)
+// 	   else
+// 	     console.log(info);
+// 	});
+// });
 
 
 
