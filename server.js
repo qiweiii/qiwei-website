@@ -19,11 +19,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + 'index.html'));
 });
 
-// add other routes below
-app.get('/colorgame', function (req, res) {
-  res.sendFile(path.join(__dirname + '/colorGame.html'));
-});
-
+// do i still need this?
 app.get('/.well-known/acme-challenge/:content', function(req, res) {
   res.send('LmCS_e-DNSJJGxd1_CqPIX5CenY_9iuiicANZiMVljQ.SKMMb6gi2eLogAXs8qmH0AN-TKk2fEwHs4DKTb18dtM');
 });
@@ -45,16 +41,16 @@ app.post('/contact', function (req, res) {
     from: 'chiwaydyang@gmail.com',
     to: 'yangqiwei97@gmail.com',
     subject: 'New message from contact form at qiweiyang.me',
-    text: 'asdf'
-    //text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
-      return console.log(error);
+      console.log(error);
+      res.end("error");
+    } else {
+      console.log("Message sent: " + response.message);
+      res.end("sent")
     }
-    console.log('Message sent: %s', info.messageId);
-    // Preview only available when sending through an Ethereal account
-    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
   });
 });
 // app.post('/contact', function (req, res) {
