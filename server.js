@@ -25,7 +25,7 @@ app.get('/colorgame', function (req, res) {
 });
 
 app.get('/.well-known/acme-challenge/:content', function(req, res) {
-  res.send('w4JwsF3zbUaabgu0RgehwsH3tFI4aj5P7BqrFh-IyBg')
+  res.send('LmCS_e-DNSJJGxd1_CqPIX5CenY_9iuiicANZiMVljQ.SKMMb6gi2eLogAXs8qmH0AN-TKk2fEwHs4DKTb18dtM');
 });
 
 //send email
