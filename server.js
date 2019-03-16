@@ -23,10 +23,7 @@ app.get('/resume', (req, res) => {
 	res.sendFile(path.join(__dirname + '/Resume.pdf'));
 })
 
-// // do i still need this?
-// app.get('/.well-known/acme-challenge/:content', function(req, res) {
-//   res.send('LmCS_e-DNSJJGxd1_CqPIX5CenY_9iuiicANZiMVljQ.SKMMb6gi2eLogAXs8qmH0AN-TKk2fEwHs4DKTb18dtM');
-// });
+
 
 
 
